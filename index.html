@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seja bem-vindo</title>
     <style>
-        
         nav {
             background-color: #d3d3d3; 
             padding: 10px 20px;
+            display: flex;
+            align-items: center; 
+            justify-content: space-between; 
         }
 
         nav ul {
@@ -16,7 +18,7 @@
             list-style: none;
             margin: 0;
             padding: 0;
-            justify-content: right;
+            justify-content: flex-end; 
         }
 
         nav ul li {
@@ -34,15 +36,21 @@
             color: #000;
         }
 
-       
         #conteudo {
             padding: 20px;
             font-family: Arial, sans-serif;
+        }
+
+        
+        .logo {
+            width: 100px;  
+            height: auto;
         }
     </style>
 </head>
 <body>
     <nav>
+        <img src="imagens/logo.png" alt="Logomarca" class="logo">
         <ul>
             <li><a href="#" onclick="navegarPara('Inicio')">Inicio</a></li>
             <li><a href="#" onclick="navegarPara('Sobre')">Sobre</a></li>
@@ -55,7 +63,6 @@
     </section>
 
     <script>
-        
         function navegarPara(pagina) {
             const conteudo = document.getElementById("conteudo");
 
